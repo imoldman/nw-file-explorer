@@ -2,6 +2,10 @@
   -webkit-user-select: none;
 }
 
+body {
+  background-image: url('images/htmlbg.png')
+}
+
 .files {
   padding: 0;
   margin: 0;
