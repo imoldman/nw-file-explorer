@@ -1,0 +1,33 @@
+* {
+  -webkit-user-select: none;
+}
+
+.files {
+  padding: 0;
+  margin: 0;
+}
+
+.file {
+  margin: 5px;
+  width: 80px;
+  display: inline-block;
+
+  text-align: center;
+  vertical-align: top;
+}
+
+.file:focus {
+  background-color: white;
+}
+
+.file .name {
+  width: 80px;
+  word-wrap: break-word;
+  -webkit-user-select: text;
+}
+
+.file .icon {
+  margin: auto;
+  margin-top: 0;
+  width: 60px;
+}
