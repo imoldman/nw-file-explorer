@@ -7,7 +7,6 @@
 <link href="style.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
 <script type="text/javascript" src="js/jquery.quicksand.js"></script>
-<script type="text/javascript" src="js/underscore-min.js"></script>
 <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
@@ -26,17 +25,9 @@
 
   <div style="float: left; position: absolute; left: 210px; right: 0; top: 0; bottom: 50px">
     <div class="row">
-      <ul class="breadcrumb">
-        <li>
-          <a href="#">Home</a> <span class="divider">/</span>
-        </li>
-        <li>
-          <a href="#">Library</a> <span class="divider">/</span>
-        </li>
-        <li class="active">Data</li>
-      </ul>
+      <ul id="addressbar" class="breadcrumb"></ul>
     </div>
-    <div class="row" style="background: #FFF; margin: -5px 1px 0 -19px; height: 100%; overflow: auto">
+    <div class="row" style="background: #FFF; -webkit-border-radius: 2px; margin: -5px 1px 0 -19px; height: 100%; overflow: auto">
       <ul style="margin: 5px;" id="files"></ul>
     </div>
   </div>
