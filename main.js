@@ -1,5 +1,6 @@
-var folder_view = require('folder_view');
 var abar = require('address_bar');
+var folder_view = require('folder_view');
+var path = require('path');
 
 $(document).ready(function() {
   global.$ = $;
@@ -9,6 +10,12 @@ $(document).ready(function() {
 
   folder.open(process.cwd());
   addressbar.set(process.cwd());
+
+  folder.on('navigate', function(dir, mine) {
+    if (mine.type == 'folder') {
+      addressbar.enter(mine);
+    }
+  });
 
   addressbar.on('navigate', function(dir) {
     folder.open(dir);
