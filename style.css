@@ -12,7 +12,8 @@ body {
 }
 
 .file {
-  margin: 5px;
+  padding: 2px;
+  margin: 2px;
   width: 80px;
   display: inline-block;
 
@@ -20,18 +21,26 @@ body {
   vertical-align: top;
 }
 
-.file:focus {
-  background-color: white;
+.file.focus {
+  background-color: #08C;
+  -webkit-border-radius: 4px;
 }
 
 .file .name {
   width: 80px;
   word-wrap: break-word;
-  -webkit-user-select: text;
+}
+
+.file.focus .name {
+  color: white;
 }
 
 .file .icon {
   margin: auto;
   margin-top: 0;
   width: 60px;
+}
+
+.file.focus .icon {
+  -webkit-filter: invert(20%);
 }
