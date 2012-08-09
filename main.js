@@ -1,6 +1,7 @@
 var abar = require('address_bar');
 var folder_view = require('folder_view');
 var path = require('path');
+var shell = require('shell');
 
 $(document).ready(function() {
   global.$ = $;
@@ -11,9 +12,11 @@ $(document).ready(function() {
   folder.open(process.cwd());
   addressbar.set(process.cwd());
 
-  folder.on('navigate', function(dir, mine) {
-    if (mine.type == 'folder') {
-      addressbar.enter(mine);
+  folder.on('navigate', function(dir, mime) {
+    if (mime.type == 'folder') {
+      addressbar.enter(mime);
+    } else {
+      shell.execute(mime.path);
     }
   });
 
