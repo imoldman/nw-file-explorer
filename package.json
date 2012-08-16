@@ -1,4 +1,5 @@
 {
+  "name": "nw-file-explorer",
   "main": "index.html",
   "window": {
     "toolbar": false
