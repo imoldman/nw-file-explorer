@@ -13,6 +13,7 @@ $(document).ready(function() {
   addressbar.set(process.cwd());
 
   folder.on('navigate', function(dir, mime) {
+    console.log("open", mime.name);
     if (mime.type == 'folder') {
       addressbar.enter(mime);
     } else {
